@@ -81,7 +81,7 @@ Here are the top 15 best words.
 
 Here are the 5 worst words
 
-<table border="1"class="dataframe"><thead><tr style="text-align: right;"><th>Guess</th><th>Average Possible Words After Guess</th></tr></thead><tbody><tr><td>hudud</td><td>4454.262411</td></tr><tr><td>phpht</td><td>4458.732809</td></tr><tr><td>gynny</td><td>4677.415665</td></tr><tr><td>qajaq</td><td>4960.594665</td></tr><tr><td>fuzzy</td><td>5041.903639</td></tr><tr><td>cocco</td><td>5046.276133</td></tr><tr><td>hyphy</td><td>5237.960839</td></tr><tr><td>immix</td><td>5248.980419</td></tr><tr><td>gyppy</td><td>5384.723558</td></tr><tr><td>fuffy</td><td>5396.426303</td></tr></tbody></table>
+<table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th>word</th>      <th>count</th>    </tr>  </thead>  <tbody>    <tr>      <td>hudud</td>      <td>4454.262411</td>    </tr>    <tr>      <td>phpht</td>      <td>4458.732809</td>    </tr>    <tr>      <td>gynny</td>      <td>4677.415665</td>    </tr>    <tr>      <td>qajaq</td>      <td>4960.594665</td>    </tr>    <tr>      <td>fuzzy</td>      <td>5041.903639</td>    </tr>    <tr>      <td>cocco</td>      <td>5046.276133</td>    </tr>    <tr>      <td>hyphy</td>      <td>5237.960839</td>    </tr>    <tr>      <td>immix</td>      <td>5248.980419</td>    </tr>    <tr>      <td>gyppy</td>      <td>5384.723558</td>    </tr>    <tr>      <td>fuffy</td>      <td>5396.426303</td>    </tr>  </tbody></table>
 
 #### Complications
 
