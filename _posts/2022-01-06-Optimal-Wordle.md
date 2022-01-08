@@ -26,7 +26,7 @@ play. It's very short and will help make this post make a lot more sense.
 # Solver
 
 [This lil app](https://share.streamlit.io/tjboller/wordle/main/visualizations.py)
-I made has a tool to help you solve the puzzles optimally.
+helps you solve the puzzles optimally - check it out.
 
 # What is the best start word?
 
