@@ -171,3 +171,7 @@ has more distribution than a "pointy" distribution over the same interval
 2. Instead of just taking the average entropy across all words, we need to 
 take the expectation. Namely, the probability of the word being the answer
  times the entropy of the remaining words summed across all possible words.
+
+# Repo
+
+Check out the code powering this anaylsis [here](https://github.com/tjboller/wordle)
