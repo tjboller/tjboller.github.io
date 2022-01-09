@@ -31,23 +31,18 @@ helps you solve the puzzles optimally and explores how good different start
 
 # Summary
 
-My analysis shows that at the end of the day, Wordle is mostly a game of luck.
+My analysis shows that Wordle is mostly a game of luck.
 The best word to start with is `L A R E S` and I have programmed an [optimal
 solver](https://share.streamlit.io/tjboller/wordle/main/visualizations.py) but 
-really as long as you don't do stupid stuff, you probably can't tell the difference
+as long as you don't do stupid stuff, you probably can't tell the difference
 between someone who is playing optimally and someone who just doesn't make 
 mistakes or really dumb moves. Just play the game and have fun lol
 
 # What is the best start word?
 
-You've probably realized that the word you start out with can make a huge difference
-in how quickly you can solve the puzzle. You might have found a word 
-you like - but what is the BEST start word?
-
 The answer is `L A R E S`
 
 How did we get that? First we have to define what do we mean by the best.
-
 It's easiest to start with an example:
 
 Assume the hidden answer word is `T I G E R` and your start word is `E A R T H`.
@@ -61,7 +56,6 @@ The game will tell you that the hidden answer word:
 
 There are 12,972 total five letter words as described in the <a href=" https://drive.google.com/file/d/1oGDf1wjWp5RF_X9C7HoedhIWMh5uJs8s/view" target="_blank">scrabble 
 dictionary</a>. But there are only 144 words that fit all of these criteria. 
-
 
 So obviously, we don't know what the hidden answer is, but what we can do is
 say how many words are possible after our first guess 
@@ -117,14 +111,15 @@ the same (ks-test pvalue=0.98).
     <img src="{{site.url}}/resources/guess_history.png" alt="history">
 </p>
 
-Most people can't play optimally, so what if you just picked the most common
-possible remaining word - what would you score distribution look like?
+Most people can't play optimally, so what if your strategy was to pick
+ the most frequently used
+possible remaining word - what would you score distribution look like then?
 
 <img src="{{site.url}}/resources/optimal_vs_freq_lares.png" alt="opt_vs_freq">
 
 Certainly better if you play optimally, but doesn't seem like that all that
 big of a qualitative difference. What about if were an average player, who picks
-a non-optimal but still pretty good start word, and after words just picks
+a non-optimal but still pretty good start word and then after words just picks
 the most common word remaining?
 
 <img src="{{site.url}}/resources/optimal_vs_average.png" alt="opt_vs_avg">
