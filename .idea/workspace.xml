@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf95cf79-7f94-49fa-9e92-0a0ddf4aea3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2022-01-09-Optimal-Wordle.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-01-09-Optimal-Wordle.md" afterDir="false" />
-    </list>
+    <list default="true" id="bf95cf79-7f94-49fa-9e92-0a0ddf4aea3d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +52,7 @@
       <updated>1641479207524</updated>
       <workItem from="1641479214631" duration="21589000" />
       <workItem from="1641506234171" duration="7375000" />
-      <workItem from="1641607309685" duration="6563000" />
+      <workItem from="1641607309685" duration="6885000" />
     </task>
     <servers />
   </component>

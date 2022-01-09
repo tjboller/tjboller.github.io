@@ -14,7 +14,7 @@ You can check out my a patent application for a method for prioritizing
 biological targets for potential medications <a href="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2021111113" target="_blank">here</a>
 
 I'm a curious person and I am often confronted with cool data problems in my daily life and hobbies. 
-This is a space I explore those curiosities.
+This is a space where I explore those curiosities.
 
 I am a proud father and husband. I love music, gardening, food, pop culture, 
 beating my brother in super smash bros, and learning the piano. 
