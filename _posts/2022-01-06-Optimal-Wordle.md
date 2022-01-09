@@ -28,6 +28,15 @@ play. It's very short and will help make this post make a lot more sense.
 [This lil app](https://share.streamlit.io/tjboller/wordle/main/visualizations.py)
 helps you solve the puzzles optimally - check it out.
 
+# Summary
+
+My analysis shows that at the end of the day, Wordle is mostly a game of luck.
+The best word to start with is `L A R E S` and I have programmed an [optimal
+solver](https://share.streamlit.io/tjboller/wordle/main/visualizations.py) but 
+really as long as you don't do stupid stuff, you probably can't tell the difference
+between someone who is playing optimally and someone who just doesn't make 
+mistakes or really dumb moves. Just play the game and have fun lol
+
 # What is the best start word?
 
 You've probably realized that the word you start out with can make a huge difference
@@ -52,7 +61,6 @@ The game will tell you that the hidden answer word:
 There are 12,972 total five letter words as described in the <a href=" https://drive.google.com/file/d/1oGDf1wjWp5RF_X9C7HoedhIWMh5uJs8s/view" target="_blank">scrabble 
 dictionary</a>. But there are only 144 words that fit all of these criteria. 
 
-The best guess will result in the fewest words left to choose from.
 
 So obviously, we don't know what the hidden answer is, but what we can do is
 say how many words are possible after our first guess 
@@ -61,8 +69,11 @@ and follow the same process if is the answer is `W O R L D`,
 and `A B O U T` and every single other possible five letter word. So if we
 take the average of every single possible answer, 
 we can say how many words we *expect* to have left after we guess our 
-start word.  
-(It's the plain average since every word is equally likely to be the answer)
+start word.  (It's the plain average since every word is equally 
+likely to be the answer*)
+
+The best guess will result in the fewest words left to choose from on average
+across all possible answers.
 
 Here is the distribution of how many words are left if you first guess 
 `EARTH` across every single possible answer. You can look at the distributions 
@@ -83,6 +94,43 @@ Here are the 5 worst words
 
 <table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th>word</th>      <th>count</th>    </tr>  </thead>  <tbody>    <tr>      <td>hudud</td>      <td>4454.262411</td>    </tr>    <tr>      <td>phpht</td>      <td>4458.732809</td>    </tr>    <tr>      <td>gynny</td>      <td>4677.415665</td>    </tr>    <tr>      <td>qajaq</td>      <td>4960.594665</td>    </tr>    <tr>      <td>fuzzy</td>      <td>5041.903639</td>    </tr>    <tr>      <td>cocco</td>      <td>5046.276133</td>    </tr>    <tr>      <td>hyphy</td>      <td>5237.960839</td>    </tr>    <tr>      <td>immix</td>      <td>5248.980419</td>    </tr>    <tr>      <td>gyppy</td>      <td>5384.723558</td>    </tr>    <tr>      <td>fuffy</td>      <td>5396.426303</td>    </tr>  </tbody></table>
 
+## Playing Optimally
+
+If we play optimally what is the distribution of the number of turns it takes
+to win?
+
+<img src="{{site.url}}/resources/play_optimally.png" alt="optimal">
+
+Kinda surprisingly, we still lose a good amount of games. Let's see if we try 
+a non-optimal but not dumb first word. 
+
+<img src="{{site.url}}/resources/earth_vs_lares.png" alt="earth_vs_lares">
+
+Wow ok, so these distributions are the probably almost exactly 
+the same (ks-test pvalue=0.98).
+ It's important to note, that after the first word we are playing optimally, so 
+ `EARTH` as a start word quickly catches up. Look at the history of number 
+ of possible words after the turn number:
+ 
+<p float="left">
+    <img src="{{site.url}}/resources/guess_history.png" alt="history">
+</p>
+
+Most people can't play optimally, so what if you just picked the most common
+possible remaining word - what would you score distribution look like?
+
+<img src="{{site.url}}/resources/optimal_vs_freq_lares.png" alt="opt_vs_freq">
+
+Certainly better if you play optimally, but doesn't seem like that all that
+big of a qualitative difference. What about if were an average player, who picks
+a non-optimal but still pretty good start word, and after words just picks
+the most common word remaining?
+
+<img src="{{site.url}}/resources/optimal_vs_average.png" alt="opt_vs_avg">
+
+Yea again, it's worse but probably not all that noticeable in real life.
+So don't be like me, just play the game for fun and move on with your life. 
+
 #### Complications
 
 In this analysis we assume that all valid 5 letter words are equally likely to
@@ -102,7 +150,8 @@ I speed it up by
 250 possible best first guesses, then rerunning those on all possible answers.
 
 Also, this is using a greedy approach. It might not be globally optimal. The 
-global optimization problem is completely computational intractable.
+global optimization problem is completely computationally intractable (as far
+as I can tell).
 
 ## What if the answers aren't selected randomly
 
@@ -121,14 +170,3 @@ has more distribution than a "pointy" distribution over the same interval
 2. Instead of just taking the average entropy across all words, we need to 
 take the expectation. Namely, the probability of the word being the answer
  times the entropy of the remaining words summed across all possible words.
- 
-## Playing Optimally
-
-If we play optimally what is the distribution of the number of turns it takes
-to win?
-
-TO COME 
- 
-## Reverse Engineering Heuristics 
-
-TO COME
